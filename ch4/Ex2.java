@@ -1,4 +1,4 @@
-//Ex2
+//Ex3
 
 class Float{
 float f;
