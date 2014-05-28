@@ -4,7 +4,7 @@
 
 class NewString{
 	NewString(String x){
-	this.c = x;
+	c = x;
 	}
 	
 	protected String a;
