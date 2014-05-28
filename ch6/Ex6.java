@@ -1,4 +1,4 @@
-//Ex5
+//Ex6
 
 class Dog{
 	void bark(){System.out.println("BARK!");}
@@ -9,8 +9,11 @@ class Dog{
 	void bark(long i){System.out.println("E! " + i);}
 	void bark(float i){System.out.println("F! " + i);}
 	void bark(double i){System.out.println("G! " + i);}
+	void bark(int i, char c){System.out.println("H! " + i + c);}
+	void bark(char c, int i){System.out.println("I! " + c + i);}
+
 }
-public class Ex5{
+public class Ex6{
 	
 	public static void main(String[] args){
 	
@@ -26,5 +29,8 @@ public class Ex5{
 		d.bark(1L);
 		d.bark(1.0f);
 		d.bark(1.0);
+		d.bark(1,c);
+		d.bark(c,1);
+
 	}
 }
