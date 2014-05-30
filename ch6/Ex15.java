@@ -11,7 +11,6 @@ class Cup {
 public class Ex15 {
 	public static void main(String[] args) {
 		System.out.println("Inside main()");
-		
-		Cup c = new Cup();
+		new Cup();
 	}
 }
