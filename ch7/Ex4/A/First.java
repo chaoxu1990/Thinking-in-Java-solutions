@@ -1,8 +1,12 @@
 //first.java
-package Ex2.A;
+package A;
 
 public class First {
-	protected void f() {
+	public void f() {
 		System.out.println("First.f()");
+	}
+	public static void main(String [] args){
+		Second sec = new Second();
+		sec.s();
 	}
 }

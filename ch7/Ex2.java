@@ -9,7 +9,7 @@
 */
 
 
-import net.mindview.simple.*;
+//import net.mindview.simple.*;
 import java.util.*;
  
 public class Collision {

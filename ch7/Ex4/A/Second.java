@@ -1,8 +1,6 @@
 //second.java
 
-package Ex4.A;
-//import Ex2.A.First;
-
+package A;
 public class Second {
 	protected void s() {
 		System.out.println("Second.s()");
