@@ -1,4 +1,4 @@
-//Ex5.java
+//Ex7.java
 
 class A{
 	A(int i){System.out.println("A(" + i + ")");}
