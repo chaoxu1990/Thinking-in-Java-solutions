@@ -16,7 +16,7 @@ public class Ex16 extends Amphibian{
         a.Swim();
         a.Eat();
         a.Walk();
-        a.Grow(a);
+        
         Amphibian.Grow(a);
 
     }
