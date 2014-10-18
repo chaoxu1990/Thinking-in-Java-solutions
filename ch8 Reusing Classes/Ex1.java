@@ -4,7 +4,6 @@ class First{
 private String str;
 
 public String toString(){
-	if(str == null)
 	str = "Ch8 Ex1.java";
 	return str;
 }
@@ -13,7 +12,10 @@ public String toString(){
 public class Ex1{
 	public static void main(String [] args){
 		
-		First fst = new First();
+		First fst;
+		
+		if(fst == null)
+			fst = new First();
 	
 		System.out.println(fst);		
 		}
