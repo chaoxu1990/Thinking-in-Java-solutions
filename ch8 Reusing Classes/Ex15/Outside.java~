@@ -26,7 +26,8 @@ class Outside2 extends Ex15 {
 	}
 	public static void main(String[] args){
 	Ex15 c2 = new Ex15();
-
+	
+	c2.ptd();
 	c2.pud();
 
 	Outside2 osd2 = new Outside2();
