@@ -1,4 +1,5 @@
-//Chapter 9, Exercise 6
+//Chapter 9, Exercise 8
+import java.util.*;
 
 enum Note{
 	MIDDLE_C, C_SHARP, B_FLAT;
@@ -6,25 +7,25 @@ enum Note{
 
 class Instrument{
 	void play(Note n) {System.out.println("Instrument.play()" + n);}
-	public String toString(){return "Instrument";}
+	String what(){return "Instrument";}
 	void adjust() {System.out.println("Adjusting Instrument");}
 }
 
 class Wind extends Instrument{
 	void play(Note n) {System.out.println("Wind.play()" + n);}
-	public String toString(){return "Wind";}
+	String what(){return "Wind";}
 	void adjust() {System.out.println("Adjusting Wind");}
 }
 
 class Percussion extends Instrument{
 	void play(Note n) {System.out.println("Percussion.play()" + n);}
-	public String toString(){return "Percussion";}
+	String what(){return "Percussion";}
 	void adjust() {System.out.println("Adjusting Percussion");}
 }
 
 class Stringed extends Instrument{
 	void play(Note n) {System.out.println("Stringed.play()" + n);}
-	public String toString(){return "Stringed";}
+	String what(){return "Stringed";}
 	void adjust() {System.out.println("Adjusting Stringed");}
 }
 
@@ -35,11 +36,24 @@ class Brass extends Wind{
 
 class Woodwind extends Wind{
 	void play(Note n) {System.out.println("Woodwind.play()" + n);}
-	public String toString(){return "Woodwind";}
+	String what(){return "Woodwind";}
+}
+class RandomInstrumentGenerator{
+    private Random rand = new Random();
+    public Instrument next(){
+        switch(rand.nextInt(5)){
+            default:
+            case 0: return new Wind();
+            case 1: return new Percussion();
+            case 2: return new Stringed();
+            case 3: return new Brass();
+            case 4: return new Woodwind();
+        }
+    }
 }
 
-public class Ex6{
-	public static void tune(Instrument i){
+public class Ex8{
+    public static void tune(Instrument i){
 		i.play(Note.MIDDLE_C);
 	}
 
@@ -48,15 +62,12 @@ public class Ex6{
 	}
 
 	public static void main(String[] args){
-		Instrument[] orchestra = {
-			new Wind(),
-			new Percussion(),
-			new Stringed(),
-			new Brass(),
-			new Woodwind()
-		};
-		tuneAll(orchestra);
-
-        for(Instrument i: orchestra)System.out.println(i);
+        RandomInstrumentGenerator gen = new RandomInstrumentGenerator();
+		Instrument[] orchestra = new Instrument[10];
+        for(int i = 0; i<orchestra.length; i++)
+            orchestra[i] = gen.next();
+        tuneAll(orchestra);
 	}
 }
+
+

@@ -1,4 +1,4 @@
-//Chapter 9, Exercise 6
+//Chapter 9, Exercise 7
 
 enum Note{
 	MIDDLE_C, C_SHARP, B_FLAT;
@@ -6,25 +6,25 @@ enum Note{
 
 class Instrument{
 	void play(Note n) {System.out.println("Instrument.play()" + n);}
-	public String toString(){return "Instrument";}
+	String what(){return "Instrument";}
 	void adjust() {System.out.println("Adjusting Instrument");}
 }
 
 class Wind extends Instrument{
 	void play(Note n) {System.out.println("Wind.play()" + n);}
-	public String toString(){return "Wind";}
+	String what(){return "Wind";}
 	void adjust() {System.out.println("Adjusting Wind");}
 }
 
 class Percussion extends Instrument{
 	void play(Note n) {System.out.println("Percussion.play()" + n);}
-	public String toString(){return "Percussion";}
+	String what(){return "Percussion";}
 	void adjust() {System.out.println("Adjusting Percussion");}
 }
 
 class Stringed extends Instrument{
 	void play(Note n) {System.out.println("Stringed.play()" + n);}
-	public String toString(){return "Stringed";}
+	String what(){return "Stringed";}
 	void adjust() {System.out.println("Adjusting Stringed");}
 }
 
@@ -35,10 +35,17 @@ class Brass extends Wind{
 
 class Woodwind extends Wind{
 	void play(Note n) {System.out.println("Woodwind.play()" + n);}
-	public String toString(){return "Woodwind";}
+	String what(){return "Woodwind";}
 }
 
-public class Ex6{
+class newType extends Instrument{
+    void play(Note n) {System.out.println("newType.play()" + n);}
+	String what(){return "newType";}
+	void adjust() {System.out.println("Adjusting newType");}
+
+
+}
+public class Ex7{
 	public static void tune(Instrument i){
 		i.play(Note.MIDDLE_C);
 	}
@@ -53,10 +60,10 @@ public class Ex6{
 			new Percussion(),
 			new Stringed(),
 			new Brass(),
-			new Woodwind()
+			new Woodwind(),
+            new newType()
 		};
 		tuneAll(orchestra);
-
-        for(Instrument i: orchestra)System.out.println(i);
 	}
 }
+
