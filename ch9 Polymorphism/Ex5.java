@@ -1,4 +1,4 @@
-//Ex1.java
+//Ex5.java
 //
 class Cycle{
     Cycle(){
