@@ -1,3 +1,4 @@
+//Ch9 Ex16
 class AlertStatus{
     public void status(){System.out.println("VoidAlert!");}
 }
