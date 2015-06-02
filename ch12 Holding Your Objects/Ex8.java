@@ -1,6 +1,6 @@
-//Ch12, Ex1
+//Ch12, Ex8
 
-import java.util.ArrayList;
+import java.util.*;
 
 class Gerbil{
     int gerbilNumber;
@@ -10,15 +10,14 @@ class Gerbil{
     }
 }
 
-public class Ex1{
+public class Ex8{
     public static void main(String[] args){
         ArrayList<Gerbil> gb = new ArrayList<Gerbil>();
         for(int i = 0; i<5; i++)
             gb.add(new Gerbil(i));
-        for(int i = 0; i<5; i++)
-            gb.get(i).hop();
 
-        for(Gerbil g: gb)
-            g.hop();
+        Iterator<Gerbil> it = gb.iterator();
+        while(it.hasNext()) it.next().hop();
     }
 }
+
